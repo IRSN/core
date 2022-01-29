@@ -24,7 +24,7 @@ target_include_directories(apf_sim PUBLIC
 option(ENABLE_FIELDSIM "Enable use of FieldSim from Simmetrix SimModSuite" FALSE)
 message(STATUS "ENABLE_FIELDSIM: ${ENABLE_FIELDSIM}")
 set(USE_FIELDSIM FALSE)
-if( ${SIMMODSUITE_SimField_FOUND} AND STREQUAL ${ENABLE_FIELDSIM} "ON" )
+if( STREQUAL ${ENABLE_FIELDSIM} "ON" )
   set(USE_FIELDSIM TRUE)
 endif()
 set(USE_SIM_ADVMESHING ${HAVE_SIMADVMESHING})
